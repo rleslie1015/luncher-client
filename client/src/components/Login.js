@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
-
+import { login } from "../actions/login"
 // STILL NEED TO BUILD OUT THE ACTIONS import { login } from '../actions'
 
 class Login extends React.Component {
@@ -49,9 +49,9 @@ class Login extends React.Component {
     }
 }
 
-const mapStatetToProps = ({ loggingIn, error}) => ({
+const mapStateToProps = ({ loggingIn, error}) => ({
     error,
     loggingIn
 });
 
-export default connect(mapStatetToProps, { login })(Login);
+export default connect(mapStateToProps, { login })(Login);
